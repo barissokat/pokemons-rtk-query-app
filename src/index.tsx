@@ -1,19 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { render } from 'react-dom'
+import { ApiProvider } from '@reduxjs/toolkit/query/react'
 
 import './index.css';
 
 import App from './App';
-import { setupStore } from './store'
+import { pokemonApi } from './services/pokemon'
 
-const store = setupStore()
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const rootElement = document.getElementById('root')
+render(
+  <ApiProvider api={pokemonApi}>
+    <App />
+  </ApiProvider>,
+  rootElement
+)
