@@ -1,11 +1,10 @@
-import React from 'react';
 import { render } from 'react-dom'
 import { ApiProvider } from '@reduxjs/toolkit/query/react'
-
-import './index.css';
+import { pokemonApi } from './services/pokemon'
 
 import App from './App';
-import { pokemonApi } from './services/pokemon'
+
+import './index.css';
 
 const rootElement = document.getElementById('root')
 render(

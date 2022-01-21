@@ -1,4 +1,4 @@
-import { useGetPokemonByNameQuery } from './services/pokemon'
+import { useGetPokemonByNameQuery } from '../services/pokemon'
 
 export const Pokemon = ({
   name,
